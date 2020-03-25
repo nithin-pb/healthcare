@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+
+.header{
+    left: 0;
+    height: 6vh;
+    color: #5f6368;;
+    background-color: white;
+    border-bottom: 1px solid #e8eaed;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    position: relative;
+    align-items: center;
+    box-shadow: 0 1px 5px 1px rgba(0,0,0,.2);
+    transition: box-shadow .3s cubic-bezier(.4,0,.2,1);
+    transition-property: box-shadow;
+
+}
+
+.header .item{
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.map-wrapper{
+    padding-top: 30px;
+    padding-left: 30px;
+    float: left;
+}
+
+.conatainer{
+    font-family: 'Roboto', sans-serif;
+    float: clear;
+}
+
+.updates{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: right;
+    padding-right: 30px;
+}
+
+.updates .update-top{
+    height: 40vh;
+    width: 40vw;
+    border: 1px solid #e8eaed;
+    overflow: auto;
+}
+
+.updates .update-bottem{
+    margin-top: 30px;
+    height: 40vh;
+    width: 40vw;
+    border: 1px solid #e8eaed;
+    overflow: auto;
+}
+
+.card{
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-title{
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.card-content{
+    padding-right: 40px;
+}
+
+.card-content li{
+    color: #2c2c2c; 
+    padding-bottom: 4%;
+    list-style: none;
+    justify-content: safe;
+    font-size: 14px;
+}
+
+.update-wrapper{
+    padding-bottom: 20px;
+}
+
+.card-title h5{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding:0;
+}
+
+.state{
+    position: fixed;
+    height: 90vh;
+}
+
+.about{
+    padding-left: 20px;
+    cursor: pointer;
+}
+.about:hover{
+    color: black;
+    transition: .3s;
+}
+
+.Developers {
+    transition: 0.5s;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+.Developers .inner{
+    background-color: white;
+    height: 100vh;
+    width: 40vw;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.Developers .title{
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.Developers .content{
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 30px;
+    color: rgba(0, 0, 0, 0.646);
+    line-height: 1.5;
+    text-align: start;
+}
+
+.Developers .content p{
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.button-cls{
+    background-color: #1ba85e;
+    color: #fff;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font: 500 14px;
+    height: 35px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    letter-spacing: .25px;
+    min-width: auto;
+    outline: none;
+    padding: 0 24px;
+    position: relative;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-transition: none;
+    transition: none;
+    vertical-align: inherit;
+}
+
+.button-cls:active{
+    background-color: #0e8c4b;
+    transition: .5s;
+}
+.opac{
+    transition: 0.5s;
+    opacity: 0;
+    z-index: -1;
+}
