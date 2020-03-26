@@ -106,7 +106,7 @@ a{
 }
 
 .state{
-    position: fixed;
+    position: auto;
     height: 80vh;
 }
 
@@ -247,53 +247,6 @@ a{
     font-size: 36px;
     color: red;
 }
-
-
-
-
-
-.cssload-box-loading {
-	width: 36px;
-	height: 36px;
-	margin: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-.cssload-box-loading:before {
-	content: '';
-	width: 36px;
-	height: 4px;
-	background: rgb(0,0,0);
-	opacity: 0.1;
-	position: absolute;
-	top: 43px;
-	left: 0;
-	border-radius: 50%;
-	animation: shadow 0.58s linear infinite;
-		-o-animation: shadow 0.58s linear infinite;
-		-ms-animation: shadow 0.58s linear infinite;
-		-webkit-animation: shadow 0.58s linear infinite;
-		-moz-animation: shadow 0.58s linear infinite;
-}
-.cssload-box-loading:after {
-	content: '';
-	width: 36px;
-	height: 36px;
-	background: rgb(46,166,94);
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 2px;
-	animation: cssload-animate 0.58s linear infinite;
-		-o-animation: cssload-animate 0.58s linear infinite;
-		-ms-animation: cssload-animate 0.58s linear infinite;
-		-webkit-animation: cssload-animate 0.58s linear infinite;
-		-moz-animation: cssload-animate 0.58s linear infinite;
-}
-
 .search{
     color: #3c4043;
     max-width: 124px;
@@ -305,4 +258,24 @@ a{
     margin-left: 20px;
     font-weight: 500;
 }
+
+@media(min-width: 300px) {
+    .updates .update-top {
+      height: 40vh;
+      width: 90vw;
+      border: 1px solid #e8eaed;
+      overflow: auto;
+  }
+}
+
+@media(min-width: 600px) {
+    .updates .update-top {
+      height: 40vh;
+      width: 40vw;
+      border: 1px solid #e8eaed;
+      overflow: auto;
+  }
+}
+  
+
 
