@@ -60,7 +60,9 @@ a{
     height: 40vh;
     width: 40vw;
     border: 1px solid #e8eaed;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: pointer;
 }
 
 .updates .update-bottem{
@@ -83,6 +85,8 @@ a{
 .card-content{
     padding-right: 40px;
 }
+
+
 
 .card-content li{
     color: #2c2c2c; 
@@ -259,21 +263,27 @@ a{
     font-weight: 500;
 }
 
+.full-height{
+    height: 80vh !important;
+    transition: 0.3s;
+}
+
 @media(min-width: 300px) {
     .updates .update-top {
-      height: 40vh;
       width: 90vw;
-      border: 1px solid #e8eaed;
-      overflow: auto;
   }
+
+  .Developers .inner {
+    width: 95vw;
+}
 }
 
 @media(min-width: 600px) {
     .updates .update-top {
-      height: 40vh;
       width: 40vw;
-      border: 1px solid #e8eaed;
-      overflow: auto;
+  }
+  .Developers .inner{
+    width: 45vw;
   }
 }
   
