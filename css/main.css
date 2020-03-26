@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900&display=swap');
 
 body{
+    z-index: 10;
     margin: 0px;
     padding: 0px;
     max-height: 100vh;
@@ -12,7 +13,7 @@ a{
 
 .header{
     left: 0;
-    height: 6vh;
+    height: 50px;
     color: #5f6368;;
     background-color: white;
     border-bottom: 1px solid #e8eaed;
@@ -27,6 +28,7 @@ a{
 
 }
 
+
 .header .item{
     flex-direction: row;
     align-items: center;
@@ -39,6 +41,9 @@ a{
     float: left;
 }
 
+.map-wrapper p{
+    
+}
 .conatainer{
     font-family: 'Roboto', sans-serif;
     float: clear;
@@ -82,9 +87,11 @@ a{
 .card-content li{
     color: #2c2c2c; 
     padding-bottom: 4%;
-    list-style: none;
+    list-style: square;
+    line-height: 1.5;
     justify-content: safe;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .update-wrapper{
@@ -100,12 +107,14 @@ a{
 
 .state{
     position: fixed;
-    height: 90vh;
+    height: 80vh;
 }
 
 .about{
     padding-left: 20px;
     cursor: pointer;
+    color:#3c4043;
+    font-weight: 500;
 }
 .about:hover{
     color: black;
@@ -198,5 +207,102 @@ a{
 .opac{
     transition: 0.5s;
     opacity: 0;
-    z-index: -1;
+    z-index: -10;
+    height: 0 !important;
 }
+
+.donate{
+    background-color: #1b49a8; 
+}
+
+.splash{
+    transition: 0.5s;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+.splash .inner{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+
+.splash .inner img{
+    width: 60px;
+}
+.splash .inner p {
+    margin: 0px;
+    padding:0;
+    font-weight: 900;
+    font-family:  'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    color: red;
+}
+
+
+
+
+
+.cssload-box-loading {
+	width: 36px;
+	height: 36px;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.cssload-box-loading:before {
+	content: '';
+	width: 36px;
+	height: 4px;
+	background: rgb(0,0,0);
+	opacity: 0.1;
+	position: absolute;
+	top: 43px;
+	left: 0;
+	border-radius: 50%;
+	animation: shadow 0.58s linear infinite;
+		-o-animation: shadow 0.58s linear infinite;
+		-ms-animation: shadow 0.58s linear infinite;
+		-webkit-animation: shadow 0.58s linear infinite;
+		-moz-animation: shadow 0.58s linear infinite;
+}
+.cssload-box-loading:after {
+	content: '';
+	width: 36px;
+	height: 36px;
+	background: rgb(46,166,94);
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 2px;
+	animation: cssload-animate 0.58s linear infinite;
+		-o-animation: cssload-animate 0.58s linear infinite;
+		-ms-animation: cssload-animate 0.58s linear infinite;
+		-webkit-animation: cssload-animate 0.58s linear infinite;
+		-moz-animation: cssload-animate 0.58s linear infinite;
+}
+
+.search{
+    color: #3c4043;
+    max-width: 124px;
+    padding: 0 31px 0 15px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    line-height: 34px;
+    padding: 0 27px 0 15px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+

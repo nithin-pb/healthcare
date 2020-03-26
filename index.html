@@ -1,102 +1,118 @@
-<!DOCTYPE html>
-<html>
-    <title>
-        Our Health Live
-    </title>
-    <head>
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <!DOCTYPE html>
+    <html>
+        <title>
+            Our Health Live
+        </title>
+        <head>
+            <link rel="stylesheet" href="./css/spinner.css">
+            <link rel="stylesheet" href="./css/main.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
-        <script src ="./js/main.js"></script>
-    </head>
-    <body>
-        <div id="dev" class ="Developers opac"> 
-            <div class = "inner">
-               <div class = "title">
-                   About Developers
-               </div>
-               <div class = "content">
-                   <p>
-                   Data last modified on today by OurHealth developers.<br><br>
-                   This Website was Developed by <b>
-                       <a href ="https://github.com/nithinpachday">Nithin PB</a>
-                    </b> and <b><a href ="https://github.com/nithinpachday">Hari Unnikrishanan</a>
-                    </b>, <br>Developers of Pumex Infotech and Gamliot Technologies.
-                   <br><br>
-                   The goal of the project is to visualize various health related updates from all over the world in a single page. 
-                   We are using data from reliable sources like WHO, 
-                   State Government and National Government. The source code is available <a href="https://github.com/nithinpachday/healthcare">here</a>
-                    under strict GPL licence.
-                   <br><br>If you have questions, suggestions, or feedback, please 
-                   <a href="mailto:covidvisualizer@gmail.com" target="_blank">send us an email.</a>
-                   <br> checkout our other products and services. <a href="#">Gamliot Technologies</a>
-                </p>
-                <div class="button-cls" onClick="devClose()">
-                    close
+            <script src ="./js/main.js"></script>
+        </head>
+        <body>
+            <div id="splash" class ="splash">
+                <div class = "inner">
+                    <div class="cssload-box-loading">                    
+                    </div>
+                    
                 </div>
-               </div>
-            </div>            
-        </div>
-
-
-
-
-
-        <div class="conatainer">
-                <div class="header">
-                    <div class = "item">
-                        <a href ="#">Home</a>
+            </div>
+            <div id="dev" class ="Developers opac"> 
+                <div class = "inner">   
+                <div class = "title">
+                    About Developers
+                </div>
+                <div class = "content">
+                    <p>
+                    Data last modified on today by OurHealth developers.<br><br>
+                    This Website was Developed by <b>
+                        <a href ="https://github.com/nithinpachday">Nithin PB </a> and
+                        <a href ="https://github.com/harikrishna1555"> Hari Unnikrishnan</a>
+                        </b>, <br>Developers of Pumex Infotech and Gamliot Technologies
+                    <br><br>
+                    The goal of the project is to visualize various health related updates from all over the world in a single page. 
+                    We are using data from reliable sources like WHO, 
+                    State Government and National Government. The source code is available <a href="https://github.com/nithinpachday/healthcare">here</a>
+                        under strict GPL licence.
+                    <br><br>If you have questions, suggestions, or feedback, please 
+                    <a href="mailto:gamliot.it@gmail.com" target="_blank">send us an email.</a>
+                    <br> checkout our other products and services. <a href="#">Gamliot Technologies</a>
+                    </p>
+                    <div class="button-cls donate" onClick="$">
+                        Donate
                     </div>
-                    <div class="about" onclick="devOut()">
-                        About us
+                    <div class="button-cls" onClick="devClose()">
+                        close
                     </div>
-                </div> 
-                <div>
-                <div class= "map-wrapper">
-                    general updates
+                </div>
+                </div>            
+            </div>
 
-                    <img class="state" src="images/kerala.svg">
-                </div>                      
-                <div class="updates">
-                    <div class = "update-top card">
-                        <div class = "card-title">
-                            <h5>Statewise Updates</h5>
+
+
+            <div class="conatainer">
+                    <div class="header">
+                        <div class = "item">
+                            <a href ="#">Home</a>
                         </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime unde voluptates? Alias quo qui nihil in minima facilis quos non quibusdam suscipit quia dolore ut, ad nam recusandae deleniti!
-                                </li>
-                                <li>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam amet tempore ea accusantium, odio suscipit porro dolorem quam eveniet cum fuga nesciunt quidem mollitia architecto id aliquid placeat a? Repellendus!
-                                </li>
-                                <li>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam amet tempore ea accusantium, odio suscipit porro dolorem quam eveniet cum fuga nesciunt quidem mollitia architecto id aliquid placeat a? Repellendus!
-                                </li>
-                            </ul>
+                        <div class="about" onclick="devOut()">
+                            About us
                         </div>
-                    </div>
-                    <div class = "update-bottem card">
-                        <div class = "card-title">
-                            <h5>WHO Notifications</h5>
+                        <div class="search" onclick="devOut()">
+                            District
                         </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime unde voluptates? Alias quo qui nihil in minima facilis quos non quibusdam suscipit quia dolore ut, ad nam recusandae deleniti!
-                                </li>
-                                <li>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam amet tempore ea accusantium, odio suscipit porro dolorem quam eveniet cum fuga nesciunt quidem mollitia architecto id aliquid placeat a? Repellendus!
-                                </li>
-                                <li>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam amet tempore ea accusantium, odio suscipit porro dolorem quam eveniet cum fuga nesciunt quidem mollitia architecto id aliquid placeat a? Repellendus!
-                                </li>
-                            </ul>
+                    </div> 
+                    <div>
+                    <div class= "map-wrapper">
+                        <img class="state" src="images/kerala.svg">
+                    </div>                      
+                    <div class="updates">
+                        <div class = "update-top card">
+                            <div class = "card-title">
+                                <h5>Kerala State Gov Updates</h5>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li style="color: red;">
+                                        Any person with travel history to COVID19 affected countries or person with contact
+                                        with such a traveler, whether they are having symptoms or not, must remain in home
+                                        isolation. 
+                                    </li>
+                                    <li>
+                                        The following guidelines were issued:
+                                        routine vaccination, Advisory for pregnancy and labour management and the
+                                        Quarantine of Health care workers who are asymptomatic secondary contacts
+                                    </li>
+                                    <li style="color: red;">
+                                        Covid Care Centres have been established in all districts with a view to
+                                        accommodate people who have been advised home isolation but have no
+                                        residence in Kerala(e.g.: Tourists, people in transit etc). And to accommodate
+                                        any person in home isolation but not following the home isolation guidelines.
+                                        These centers will also accommodate the Keralite returning from various
+                                        states in India. 
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                        <div class = "update-bottem card">
+                            <div class = "card-title">
+                                <h5>WHO Notifications</h5>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>
+                                        WHO has decleared COVID-19 as epidemic affecting 195 countries as Pandemic.
+                                        Considering the increase in numbers of cases, covid-19 has been re-notified as a state specific disaster on 20.03.2020.
+                                        Kerala state has strengthened the
+                                        surveillance and control measures against the disease in view of the same.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+        </body>
+    </html>
