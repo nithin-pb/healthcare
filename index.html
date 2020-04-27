@@ -1,119 +1,317 @@
-    <!DOCTYPE html>
-    <html>
-        <title>
-            Our Health Live
-        </title>
-        <head>
-            <meta name="viewport" content="width=device-width" />
-            <link rel="stylesheet" href="./css/spinner.css">
-            <link rel="stylesheet" href="./css/main.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<title>
+    Our Health Live
+</title>
 
-            <script src ="./js/main.js"></script>
-        </head>
-        <body>
-            <div id="splash" class ="splash">
-                <div class = "inner">
-                    <div class="cssload-box-loading">                    
-                    </div>
-                    <div class = "company">© Gamliot Inc. All right reserved</div>                    
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/spinner.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favcon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favcon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="favcon/site.webmanifest">
+    <link rel="mask-icon" href="favcon/safari-pinned-tab.svg" color="#0abe83">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="scroll">
+    <div id="splash" class="splash">
+        <div class="inner">
+            <div class="cssload-box-loading"></div>
+            <div class="company">© Gamliot Technologies. All right reserved</div>
+        </div>
+    </div>
+    <div id="dev" class="Developers opac">
+        <div id="developes-note" class="inner">
+            <div class="title">
+                About Developers
+            </div>
+            <div class="content">
+                <p>
+                    This website is managed and maintained by Gamliot.  <br /><br />
+                    This Website was Developed by
+                    <b>
+                        <a href="https://github.com/nithinpachday">Nithin PB </a> and
+                        <a href="https://github.com/harikrishna1555">
+                            Hari Unnikrishnan</a> </b> with the help of Lovin K Jose, Ehijas K V, Ihsan Ali and Athul M S.
+                    <br /><br />
+                    The goal of the project is to visualize various health related
+                    updates from all over the world in a single page. Data from various resources are used in this project 
+                    including WHO, virus tracker and DHS. Source code for this project is avilable
+                    <a href="https://github.com/nithinpachday/healthcare">here</a>
+                    under strict GPL licence.
+                    <br /><br />If you have questions, suggestions, or feedback, please
+                    <a href="mailto:gamliot.it@gmail.com" target="_blank">send us an email.</a>
+                    <br />
+                    checkout our other products and services.
+                    <a href="#">Gamliot Technologies</a>
+                </p>
+                <div class="button-cls donate" onClick="donationOpen()">
+                    Donate
+                </div>
+                <div class="button-cls" onClick="devClose()">
+                    close
                 </div>
             </div>
-            <div id="dev" class ="Developers opac"> 
-                <div class = "inner">   
-                <div class = "title">
-                    About Developers
-                </div>
-                <div class = "content">
-                    <p>
-                    Data last modified on today by OurHealth developers.<br><br>
-                    This Website was Developed by <b>
-                        <a href ="https://github.com/nithinpachday">Nithin PB </a> and
-                        <a href ="https://github.com/harikrishna1555"> Hari Unnikrishnan</a>
-                        </b>, <br>Developers of Pumex Infotech and Gamliot Technologies
-                    <br><br>
-                    The goal of the project is to visualize various health related updates from all over the world in a single page. 
-                    We are using data from reliable sources like WHO, 
-                    State Government and National Government. The source code is available <a href="https://github.com/nithinpachday/healthcare">here</a>
-                        under strict GPL licence.
-                    <br><br>If you have questions, suggestions, or feedback, please 
-                    <a href="mailto:gamliot.it@gmail.com" target="_blank">send us an email.</a>
-                    <br> checkout our other products and services. <a href="#">Gamliot Technologies</a>
-                    </p>
-                    <div class="button-cls donate" onClick="$">
-                        Donate
-                    </div>
-                    <div class="button-cls" onClick="devClose()">
+        </div>
+
+        <!--Donation-->
+        <div id="donation-div" class="inner opac">
+            <div class="title">
+                Help us to grow better...
+            </div>
+            <div class="content">
+                <p>
+                    We appreciate your small contributions. Use the QR code below or use the paytm id.<br>
+                </p>
+                <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+                    <img src="images/paytm.jpg"/>
+                    <strong style="color: red;">nithinpb180@paytm</strong>
+                    <div class="button-cls" style="width:100%;margin-top:20px;"onClick="devClose()">
                         close
                     </div>
                 </div>
-                </div>            
+
+
             </div>
+        </div>
+        <!--Donation end-->
+    </div>
 
+    <div class="conatainer">
+        <div id="maintenance" class="maintenance" style = "width:100%">Site is under maintenance. You may experience difficulties using this website.</div>
+        
+        <div class="header ">
+            <div class="m-l-30 inner">
+                <div class="item active p-22-0">
+                    <a href="#">Home</a>
+                </div>
+                <div class="about" onclick="devOut()">
+                    About us
+                </div>
+                <select class="search" id = "dist_name_search" name="district" onchange="distData()">
+                    <option value="select">District</option>
+                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Idukki">Idukki</option>
+                    <option value="Ernakulam">Ernakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option>
+                    <option value="Wayanad">Wayanad</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kasaragod">Kasaragod</option>
+                </select>
+            </div>
+        </div>
 
+        <div class="con-wrapper">
+            <div class="map-wrapper">             
+                <table class ="table" id="table">
+                    <caption><h3>Corona District wise data, Kerala<p id ="last_update">Source: dhs kerala</p> </h3></caption>
+                    <thead>
+                    <tr>
+                      <th class ="t-a-l w-30">District</th>
+                      <th class ="t-a-l t-a-r">Under Observation</th>
+                      <th class ="t-a-l t-a-r">Under Home Isolation</th>
+                      <th class ="t-a-l t-a-r">Symptomatic Persons Hospitalized</th>
+                      <th class ="t-a-l t-a-r">Hospitalized Today </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                
 
-            <div class="conatainer">
-                    <div class="header">
-                        <div class = "item">
-                            <a href ="#">Home</a>
+                <div class="count-wrapper">
+                  <div class="count">
+                      <h3 class="m-l-10">Statistics (Kerala, World) <p>Source: dhs kerala, WHO</p></h3>                    
+                      <div class="reports">
+                        <p>Reported cases today in Kerala</p>
+                        <p id="keralaPositive"></p>      
+                      </div>          
+                      <div class="reports">
+                        <p>Positive cases admitted in Kerala </p>
+                        <p id="keralaPositiveAdmitted"></p>      
+                      </div>  
+                      <div class="reports">
+                        <p>Confirmed cases all over world </p>
+                        <p id="worldPositiveAdmitted"></p>      
+                      </div>  
+                      <div class="reports">
+                        <p>Deaths all over World </p>
+                        <p id="worldDeath"></p>      
+                      </div>  
+                      <div class="reports border-null">
+                        <p>Countries, areas or territories with cases </p>
+                        <p id="worldRecover"></p>      
+                      </div>        
+                  </div>                  
+                </div>
+
+                <div class="count-wrapper">
+                    <div class="count">
+                        <h3 class="m-l-10">Statistics, India <p>Source: Virus tracker</p></h3>   
+                        <div class="reports">
+                          <p>Total cases</p>
+                          <p id="total_cases"></p>      
+                        </div>          
+                        <div class="reports">
+                          <p>Total recovered cases </p>
+                          <p id="total_recovered"></p>      
                         </div>
-                        <div class="about" onclick="devOut()">
-                            About us
+                        <div class="reports">
+                            <p>Total deaths</p>
+                            <p id="total_deaths"></p>      
+                        </div> 
+                        <div class="reports">
+                          <p>Active cases reported today </p>
+                          <p id="total_new_cases_today"></p>      
                         </div>
-                        <div class="search" onclick="devOut()">
-                            District
+                        <div class="reports">
+                          <p>Deaths today </p>
+                          <p id="total_new_deaths_today"></p>      
+                        </div>  
+                        <div class="reports border-null">
+                            <p>Total active cases </p>
+                            <p id="total_active_cases"></p>      
                         </div>
-                    </div> 
-                    <div>
-                    <div class= "map-wrapper">
-                        <img class="state" src="images/kerala.svg">
-                    </div>                      
-                    <div class="updates">
-                        <div id="cardTop" class = "update-top card">
-                            <div class = "card-title">
-                                <h5>Kerala State Gov Updates</h5>
-                            </div>
-                            <div class="card-content" id="conOne" onclick="openNews()">
-                                <ul>
-                                    <li style="color: red;">
-                                        Any person with travel history to COVID19 affected countries or person with contact
-                                        with such a traveler, whether they are having symptoms or not, must remain in home
-                                        isolation. 
-                                    </li>
-                                    <li>
-                                        The following guidelines were issued:
-                                        routine vaccination, Advisory for pregnancy and labour management and the
-                                        Quarantine of Health care workers who are asymptomatic secondary contacts
-                                    </li>
-                                    <li style="color: red;">
-                                        Covid Care Centres have been established in all districts with a view to
-                                        accommodate people who have been advised home isolation but have no
-                                        residence in Kerala(e.g.: Tourists, people in transit etc). And to accommodate
-                                        any person in home isolation but not following the home isolation guidelines.
-                                        These centers will also accommodate the Keralite returning from various
-                                        states in India. 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class = "update-bottem card">
-                            <div class = "card-title">
-                                <h5>WHO Notifications</h5>
-                            </div>
-                            <div class="card-content">
-                                <ul>
-                                    <li>
-                                        WHO has decleared COVID-19 as epidemic affecting 195 countries as Pandemic.
-                                        Considering the increase in numbers of cases, covid-19 has been re-notified as a state specific disaster on 20.03.2020.
-                                        Kerala state has strengthened the
-                                        surveillance and control measures against the disease in view of the same.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    </div>                  
+                  </div>
+
+            </div>
+            <div class="updates">
+                <div class="rounded-card c-p" >
+                    <div class="flex-row" onclick="openHotspot()">
+                        <p>Hotspots</p>
+                        <div id="blink">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
                         </div>
                     </div>
+                    <div id="hotspot-item" class="h-o">
+                        <div id="district" class="scroll district">
+                        </div>
+                        <div id="district-val" class="scroll"></div>
+                    </div>
+                </div>   
+                <div id="cardTop" class="update-top card-summary-two scroll">
+                    <div class="card-title sticky-title">
+                        <h5>Kerala State Gov Updates <p id ="last_update">Source: DHS Kerala</p></h5>
+                    </div>
+                    
+                    <div class="card-content" id="conOne" onclick="openNews()">
+                    </div>
                 </div>
+                <div class="update-bottem card-summary-two   scroll">
+                    <div class="card-title sticky-title">
+                        <h5>Worldwide Notifications <p>Source: WHO, Virus Tracker</p> </h5>
+                    </div>
+                    <div class="card-content" id="conTwo" onclick="openNews2()">
+                    </div>
+                </div>
+
+                <div class="update-bottem card-summary scroll">
+                    <div class="card-title">
+                        <h5>Corona Summary <p>Source: WHO</p></h5>
+                    </div>
+                    <div class="card-content" id="conTwo" onclick="openNews2()">
+                        <ul>
+                            <li>A pneumonia of unknown cause detected in Wuhan, 
+                                China was first reported to the WHO Country Office in China on 
+                                31 December 2019.</li>
+                            <li>WHO is working 24/7 to analyse data, provide advice, 
+                                coordinate with partners, help countries prepare, 
+                                increase supplies and manage expert networks.</li>
+                            <li>The outbreak was declared a Public Health Emergency 
+                                of International Concern on 30 January 2020.</li>
+                            <li>The international community has asked for US$675 
+                                million to help protect states with weaker 
+                                health systems as part of its Strategic Preparedness 
+                                and Response Plan.</li>
+                            <li>On 11 February 2020, WHO announced a name 
+                                for the new coronavirus disease: COVID-19.</li>                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="update-bottem card-summary scroll">
+                    <div class="card-title">
+                        <h5>Usefull links<p>Source: WHO, DHS</p></h5>
+                    </div>
+                    <div class="card-content" id="conTwo" onclick="openNews2()">
+                        <ul style="border:none;">
+                            <li>Kerala Fights COVID 19 - Volunteer registration form :  <a href="https://docs.google.com/forms/d/e/1FAIpQLScBob6yePxWwt-Lx1s-1UlpCJ-pRwbwATs5tdtqTXWypfdL1Q/viewform">Click Here</a></li>
+                            <li>Kerala Health Department:  <a href="http://dhs.kerala.gov.in/">http://dhs.kerala.gov.in</a></li>
+                            <li>World Health Organization (WHO):  <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int</a></li>                          
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-        </body>
-    </html>
+        </div>
+
+        <!-- world health-->        
+        <div class="world-container">              
+            <div class="table-wrapper">                     
+                <table class = "table tablesorter" id="world-table">
+                    <caption><h3>Confirmed Cases and Deaths by Country, Territory, or Conveyance 
+                        <p>Source: Virus Tracker</p>
+                    </h3></caption>
+                    <thead>
+                    <tr>
+                    <th class ="t-a-l w-30">Location</th>
+                    <th class ="t-a-r">Total Active Cases</th>
+                    <th class ="t-a-r">Deaths</th>
+                    <th class="unresolved t-a-r">New Cases Today</th>
+                    <th class ="t-a-r">New Deaths Today</th>
+                    <th class ="t-a-r">Total Recovered</th>
+                    <th class="unresolved t-a-r">New Recovered</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="data-source">
+                <h3>About this data</h3>
+                <p>This data changes rapidly, so what’s shown may be out of date. Table totals may not always represent an accurate sum. 
+                    Information about reported cases is also available on the 
+                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health Organization site.
+                    </a>
+                </p>                
+            </div>
+            <footer class="update-bottem card-summary">
+                <div class="footer-class2 p-t-10 p-b-10">
+                    <p >About</p>
+                    <p class="p-l-10 f-n">Sign up for our health newsletter</p>
+                    <p class="p-l-10">Privacy</p>
+                    <p class="p-l-10 b-n">© Gamliot Technologies. All right reserved</p>
+                </div>
+            </footer>
+
+        </div><!-- World helth end-->
+    </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+<script src="./js/firebase.js"></script>
+</html>

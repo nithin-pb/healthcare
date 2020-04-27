@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/admin.js"></script>
+
+  </head>
+  <body>
+    <div name="myform">
+      <p>Post data and information</p>     
+      <input type="textarea" id="post" name="post" placeholder="Write the post here" />
+      <select id="date">
+        <option value="NN">Priority</option>
+        <option value="H">High</option>
+        <option value="M">Medium</option>
+        <option value="L">Low</option>
+      </select>
+      <select id="source">
+        <option value="unknown">Source</option>
+        <option value="state">State</option>
+        <option value="national">National</option>
+        <option value="WHO">WHO</option>
+      </select>
+      <input type="submit" onClick="writeUserData()" value="Submit" />
+    </div>
+    <div>
+      <p>District Wise Data</p>        
+        <select id="dist_name">
+          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Alappuzha">Alappuzha</option>
+          <option value="Pathanamthitta">Pathanamthitta</option>
+          <option value="Kottayam">Kottayam</option>
+          <option value="Idukki">Idukki</option>
+          <option value="Ernakulam">Ernakulam</option>
+          <option value="Thrissur">Thrissur</option>
+          <option value="Palakkad">Palakkad</option>
+          <option value="Malappuram">Malappuram</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Wayanad">Wayanad</option>
+          <option value="Kannur">Kannur</option>
+          <option value="Kasaragod">Kasaragod</option> 
+        </select>
+        <input type="number" id="observation" name="observation" placeholder="People under Observation" />
+        <input type="number" id="isolation" name="dist_name" placeholder="People under isolation" />
+        <input type="number" id="hospital" name="dist_name" placeholder="People admitted to hospital" />
+        <input type="number" id="hospital_today" name="dist_name" placeholder="People admitted to hospital today" />
+        <input type="submit" onClick="insertDistrictData()" value="Submit" />        
+    </div>
+
+    <div>
+      <p>District Wise Hotspot Data</p>        
+        <select id="dist_name_hotspot">
+          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Alappuzha">Alappuzha</option>
+          <option value="Pathanamthitta">Pathanamthitta</option>
+          <option value="Kottayam">Kottayam</option>
+          <option value="Idukki">Idukki</option>
+          <option value="Ernakulam">Ernakulam</option>
+          <option value="Thrissur">Thrissur</option>
+          <option value="Palakkad">Palakkad</option>
+          <option value="Malappuram">Malappuram</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Wayanad">Wayanad</option>
+          <option value="Kannur">Kannur</option>
+          <option value="Kasaragod">Kasaragod</option> 
+        </select>
+        <input type="text" id="hotspot_val" name="observation" placeholder="Hotspot Name" />
+        <input type="submit" onClick="insertDistrictDataHotspot()" value="Submit" />        
+    </div>
+
+    <div>
+      <p>Quick Notifications</p>        
+        <select id="quick_case">
+          <option value="keralaPositive">Total reported cases today in Kerala</option>
+          <option value="keralaPositiveAdmitted">Total No. of positive cases admitted</option>
+          <option value="worldPositiveAdmitted">Total No. of positive cases admitted over globe</option>
+          <option value="worldDeath">Total No. of deaths over globe</option>
+          <option value="worldRecover">Total No. of countries, areas or territories with cases</option>
+        </select>
+        <input type="number" id="quick_case_val" name="count" placeholder="count" />
+        <input type="submit" onClick="quickNotificationInsertion()" value="Submit" />
+        
+    </div>
+  </body>
+
+</html>
