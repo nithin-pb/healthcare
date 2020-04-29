@@ -1,7 +1,6 @@
 $(document).ready(function() {
   setTimeout(function() {
     $("#splash").addClass("opac");
-    
   }, 2000);
 
  setTimeout( function(){
