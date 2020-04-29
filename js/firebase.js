@@ -78,6 +78,8 @@ function retrieveHotSpotData(distName) {
   $('.hotspot-select').removeClass('hotspot-select');
   $(id).addClass('hotspot-select');
   var placeName = null;
+  $("#district-val").empty(); 
+  $("#district-val").append('<p>No active hotspots.</p>');
   firebase
     .database()
     .ref("state/kerala/"+distName)
