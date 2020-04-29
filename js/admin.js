@@ -1,7 +1,6 @@
 
 //submit post
 function writeUserData() {
-    debugger;
     var username = "nithin";
     var test;
     var postValue = document.getElementById("post").value;

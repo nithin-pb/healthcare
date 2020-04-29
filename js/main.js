@@ -1,7 +1,7 @@
 $(document).ready(function() {
   setTimeout(function() {
     $("#splash").addClass("opac");
-    loadCountryData();
+    
   }, 2000);
 
  setTimeout( function(){
@@ -13,7 +13,15 @@ $(document).ready(function() {
   },4600);
 });
 
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
 
+    if (scroll >= 60) {
+        $(".header").addClass("header-shadow");
+    } else {
+        $(".header").removeClass("header-shadow");
+    }
+});
 
 function devClose() {
   $("#dev").addClass("opac");
@@ -43,10 +51,14 @@ function donationOpen() {
 
 function openHotspot(){
   $("#hotspot-item").toggleClass("hotspot-item");
+  $(".flex-row").toggleClass("b-b")
   $("#hotspot-item").toggleClass("h-o")
   $(".rounded-card").toggleClass("p-t-25")  
   retrieveHotSpotData('Kannur');
 }
+
+
+
 
 function loadCountryData() {
   $.ajax({

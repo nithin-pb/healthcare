@@ -86,6 +86,7 @@ function retrieveHotSpotData(distName) {
         if(childNodes.val().hotspotName!=undefined){
           $("#district-val").empty();          
           var hostspotPlaces = childNodes.val().hotspotName.split(",");
+          console.log(hostspotPlaces.length);
           for(var i=0; i<=hostspotPlaces.length;i++)
           {
             if(hostspotPlaces[i]!=undefined)
